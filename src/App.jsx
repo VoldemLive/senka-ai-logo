@@ -3,18 +3,33 @@ import Footer from "./components/Footer"
 
 function App() {
   const logosData = [
-    { id: 1, path: "./public/logos/logo1.png" },
-    { id: 2, path: "./public/logos/logo2.png" },
-    { id: 3, path: "./public/logos/logo3.png" },
-    { id: 4, path: "./public/logos/logo4.png" },
-    { id: 5, path: "./public/logos/logo5.png" },
+    {
+      id: 1,
+      path: "https://storage.cloud.google.com/senka_logos/logos/logo1.png",
+    },
+    {
+      id: 2,
+      path: "https://storage.cloud.google.com/senka_logos/logos/logo2.png",
+    },
+    {
+      id: 3,
+      path: "https://storage.cloud.google.com/senka_logos/logos/logo3.png",
+    },
+    {
+      id: 4,
+      path: "https://storage.cloud.google.com/senka_logos/logos/logo4.png",
+    },
+    {
+      id: 5,
+      path: "https://storage.cloud.google.com/senka_logos/logos/logo5.png",
+    },
   ]
   return (
-    <div className="flex flex-col min-h-screen min-w-full bg-[#e8d7c4]">
-      <header className="fixed top-0 w-screen">
+    <div className="flex flex-col min-h-screen min-w-full bg-[#8ac8be]">
+      <header className="z-[2] fixed top-0 w-screen">
         <Navbar></Navbar>
       </header>
-      <section className="mb-auto">
+      <section className="z-[1] mb-auto">
         <div className="mt-16 flex flex-wrap items-center content-center justify-center">
           {logosData.map((item) => {
             return (
@@ -28,7 +43,7 @@ function App() {
           })}
         </div>
       </section>
-      <footer>
+      <footer className="h-1">
         <Footer></Footer>
       </footer>
     </div>
