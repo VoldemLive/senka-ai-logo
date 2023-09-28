@@ -25,7 +25,7 @@ function App() {
     },
   ]
   return (
-    <div className="flex flex-col min-h-screen min-w-full bg-[#8ac8be]">
+    <div className="flex flex-col min-h-screen min-w-full">
       <header className="z-[2] fixed top-0 w-screen">
         <Navbar></Navbar>
       </header>
@@ -35,7 +35,7 @@ function App() {
             return (
               <div key={item.id} className="p-1">
                 <img
-                  className="object-cover rounded h-80"
+                  className="object-cover rounded ssm:h-[250px] sm:h-[450px] md:h-[520px] lg:h-[640px]"
                   src={item.path}
                 ></img>
               </div>
