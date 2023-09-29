@@ -1,4 +1,5 @@
 import React from "react"
+import PreviewImage from "./PreviewImage"
 
 const HorizontalList = (props) => {
   const logosData = props.logoslist
@@ -6,16 +7,9 @@ const HorizontalList = (props) => {
   return (
     <div>
       <h1 className="text-[#e8d7c4] text-lg font-semibold ">{title}</h1>
-      <div className="flex flex-row overflow-x-auto">
+      <div className="flex flex-row overflow-x-auto rounded-lg">
         {logosData.map((item) => {
-          return (
-            <div key={item.id} className="p-1">
-              <img
-                className="object-cover rounded min-w-[275px] h-[275px]"
-                src={item.path}
-              ></img>
-            </div>
-          )
+          return <PreviewImage source={item.path} key={item.id} />
         })}
       </div>
     </div>
