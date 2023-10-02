@@ -1,9 +1,10 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 import { appconst } from "../commons/static"
-const PreviewImage = (props) => {
-  const { source } = { ...props }
-  const imgsource = `${appconst.baseLogosURL}${source}`
+import fakedb from "../commons/fakedb"
+const PreviewImage = ({ source }) => {
+  const logoitem = fakedb.getItemByID(source)
+  const imgsource = `${appconst.baseLogosURL}${logoitem.path}`
   const navigation = useNavigate()
   const showBigImage = () => {
     navigation(`/big/${source}`)
