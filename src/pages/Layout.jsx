@@ -9,7 +9,7 @@ const Layout = () => {
       <header className="fixed top-0 w-screen">
         <Navbar></Navbar>
       </header>
-      <section className="p-3 mb-auto mt-12">
+      <section className="p-2 mb-auto mt-16">
         <Outlet />
       </section>
       <footer className="mt-10">
